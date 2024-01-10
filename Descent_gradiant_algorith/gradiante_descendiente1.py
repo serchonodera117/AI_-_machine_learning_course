@@ -20,11 +20,14 @@ print("suma de cuadrados de los residuos (RSS): %0-2f"%((salary-myModel.predict(
 
 plt.figure(figsize=(8,6))
 
-plt.scatter(experience, salary, color="gold", s=250, marker="o", label="Valor verdadero")
+plt.scatter(experience, salary, color="gold", s=250, 
+            marker="o", label="Valor verdadero")
 
-plt.scatter(experience, myModel.predict(experience), color="blue", s=250, marker="p", label="valor predicho")
+plt.scatter(experience, myModel.predict(experience),
+             color="blue", s=250, marker="P", label="valor predicho")
 
-plt.plot(experience, myModel.predict(experience), linewidth=4, color="deepink", label="Modelo lineal")
+plt.plot(experience, myModel.predict(experience),
+          linewidth=4, color="deeppink", label="Modelo lineal")
 experience = experience.reshape(3)
 
 plt.ylabel("salarios de miels de pesos ($)", size=16)
